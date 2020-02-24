@@ -63,7 +63,8 @@ module.exports = class extends Generator {
         ]
       };
     }
-    schema.Properties = s3Properties;
+    schema.Properties = _(s3Properties).toPairs().sortBy(0).fromPairs()
+      .value();
     return schema;
   }
 

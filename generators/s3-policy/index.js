@@ -61,6 +61,7 @@ module.exports = class extends Generator {
       Version: '2008-10-17',
       Statement: statements
     };
+    schema.Properties = _(schema.Properties).toPairs().sortBy(0).fromPairs();
     return schema;
   }
 

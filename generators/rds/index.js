@@ -66,7 +66,7 @@ module.exports = class extends Generator {
     if (!_.isEmpty(data.resourceDependency)) {
       schema.DependsOn = data.resourceDependency;
     }
-    schema.Properties = Properties;
+    schema.Properties = _(Properties).toPairs().sortBy(0).fromPairs();
     return schema;
   }
 

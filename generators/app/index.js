@@ -27,7 +27,7 @@ module.exports = class extends Generator {
           type: 'input',
           name: 'project',
           message: 'What is Project Name?',
-          default: 'resources',
+          default: 'Project',
           validate: value => !_.isNil(value) && !_.isEmpty(value.trim())
         },
         {
