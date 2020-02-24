@@ -1,6 +1,6 @@
 {
   "name": "generator-astro-cloudformation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generator to construct cloudformation schema",
   "main": "index.js",
   "author": "Rahul Khanna (khanna.mailme@gmail.com)",
