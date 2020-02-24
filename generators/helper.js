@@ -12,7 +12,7 @@ const listAllResources = baseFolder => new Promise((resolve) => {
     files.forEach((fileName) => {
       const file = fs.readFileSync(fileName, 'utf8');
       const resourceConfig = YAML.parse(file);
-      resources.push(...Object.keys(resourceConfig.Resources));
+      resources.push(...Object.keys(resourceConfig.Resources || {}));
     });
     return resolve(resources);
   });

@@ -1,12 +1,12 @@
-
 # Astro Cloudformation Schema Generator
 
 Yeoman generator for building Cloudformation schema for AWS Resources.
-****This generator provides basic cloudformation schema, please validate it before using it
+\*\*\*\*This generator provides basic cloudformation schema, please validate it before using it
 
 ## Getting Started
 
 Install:
+
 ```bash
 npm install -g yo generator-astro-cloudformation
 ```
@@ -14,6 +14,7 @@ npm install -g yo generator-astro-cloudformation
 ```bash
 yo astro-cloudformation
 ```
+
 Setup base resources folder inside your project directory, where every resources schema will be generated
 
 ### Generator CLI
@@ -51,9 +52,8 @@ yo astro-cloudformation:rds
 Generate a new dynamodb schema:
 
 ```
-yo astro-cloudformation:dynamodb
+yo astro-cloudformation:dynamo
 ```
-
 
 ## License
 
