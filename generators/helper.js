@@ -18,6 +18,23 @@ const listAllResources = baseFolder => new Promise((resolve) => {
   });
 });
 
+const listCloudfrontIdentity = async (baseFolder) => {
+  try {
+    const file = fs.readFileSync(`${baseFolder}/cf.yml`, 'utf8');
+    const resourceConfig = YAML.parse(file);
+    const identities = [];
+    Object.keys(resourceConfig.Resources || {}).forEach((index) => {
+      if (resourceConfig.Resources[index].Type === 'AWS::CloudFront::CloudFrontOriginAccessIdentity') {
+        identities.push(`!Ref:${index}`);
+      }
+    });
+    return identities;
+  } catch (err) {
+    return [];
+  }
+};
+
 module.exports = {
-  listAllResources
+  listAllResources,
+  listCloudfrontIdentity
 };
