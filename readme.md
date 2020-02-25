@@ -59,6 +59,18 @@ Generate a new dynamodb schema:
 yo astro-cloudformation:dynamo
 ```
 
+Generate a new cloudfront schema:
+
+```
+yo astro-cloudformation:cf
+```
+
+Generate a new cloudfront origin identity schema:
+
+```
+yo astro-cloudformation:cf-identity
+```
+
 ## License
 
 [MIT License](README.md) - [Rahul Khanna](https://github.com/khanna91)
